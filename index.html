@@ -65,11 +65,11 @@
             var light = new THREE.HemisphereLight(0xFFFFFF, 0x000000, 5);
             scene.add(light);
             camera.position.set(0,28,40);
-            camera.rotation.x += 0.25;
+            camera.rotation.x -= 0.5;
 
             function animate() {
                 requestAnimationFrame(animate);
-                if(obj) obj.rotation.y += 0.05;
+                if(obj) obj.rotation.y -= 0.025;
                 renderer.render(scene, camera);
             }
 
